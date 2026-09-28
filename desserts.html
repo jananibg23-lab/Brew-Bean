@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artisan Desserts | Brew & Bean – Tiramisu, Brownies, Cheesecakes & Waffles</title>
+  <meta name="description" content="Indulge in Brew & Bean's patisserie collection. Decadent chocolate brownies, authentic Italian tiramisu, New York blueberry cheesecake, and warm Belgian waffles.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Artisanal Patisserie Showcase & Dessert Cards</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html" class="active">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html" class="active">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1600&q=80" alt="Belgian chocolate cake" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Artisan Desserts</span>
+        </div>
+        <h1>Decadent Desserts & Patisserie</h1>
+        <p>Baked fresh each morning using Belgian couverture chocolate, pure French butter, and wild berries.</p>
+      </div>
+    </section>
+
+    <!-- Featured Dessert Spotlight -->
+    <section class="section-padding" style="background-color: #ffffff; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, var(--color-cream-100) 0%, var(--color-cream-200) 100%); border-radius: var(--radius-xl); padding: 3rem; border: 1px solid var(--color-border); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3rem; align-items: center;">
+          <div>
+            <span class="product-tag tag-special" style="position: static; display: inline-block; margin-bottom: 1rem;">Signature Chef Spotlight</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1rem;">Wild Blueberry Basque Cheesecake</h2>
+            <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              Our crown jewel dessert. Baked at high heat for a beautifully caramelized, deeply golden exterior with a melt-in-your-mouth creamy custard center, topped with a tart wild blueberry compote reduction.
+            </p>
+            <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 2rem;">
+              <span style="font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--color-espresso-900);">₹190</span>
+              <span style="color: var(--color-text-subtle); font-size: 0.88rem;">100% Vegetarian · Eggless Option Available</span>
+            </div>
+            <button class="btn btn-primary btn-add-order" data-name="Wild Blueberry Basque Cheesecake" data-price="190">Add to Order Tray</button>
+          </div>
+
+          <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); height: 380px;">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80" alt="Wild Blueberry Basque Cheesecake" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The 7 Dessert Showcase Cards Required by Brief -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">SWEET INDULGENCES</span>
+          <h2>The Patisserie Showcase</h2>
+          <p>Every slice, cookie, and waffle is handcrafted daily in small batches by our pastry chefs.</p>
+        </div>
+
+        <div class="products-grid">
+          
+          <!-- 1. Chocolate Brownie -->
+          <article class="product-card" data-category="desserts" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Top Seller</span>
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80" alt="Fudge Chocolate Brownie">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Warm Bakery</span>
+                <span>Sweetness: 4/5</span>
+              </div>
+              <h3 class="product-title">Walnut Fudge Brownie</h3>
+              <p class="product-description">Dense 70% dark Belgian chocolate brownie with crinkly top crust, studded with toasted walnuts and drizzled with warm ganache.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Per Slice</small></div>
+                <button class="btn-add-order" data-name="Walnut Fudge Brownie" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Cheesecake -->
+          <article class="product-card" data-category="desserts" data-price="190">
+            <div class="product-image-box">
+              <span class="product-tag">Patisserie</span>
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="New York Blueberry Cheesecake">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Baked Cheesecake</span>
+                <span>Sweetness: 3/5</span>
+              </div>
+              <h3 class="product-title">Blueberry Cheesecake</h3>
+              <p class="product-description">Authentic New York baked cream cheesecake on spiced cinnamon graham cracker crust crowned with wild blueberry glaze.</p>
+              <div class="product-footer">
+                <div class="product-price">₹190 <small>Per Slice</small></div>
+                <button class="btn-add-order" data-name="Blueberry Cheesecake" data-price="190">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Tiramisu -->
+          <article class="product-card" data-category="desserts" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Italian Classic</span>
+              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80" alt="Artisan Italian Tiramisu">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee Dessert</span>
+                <span>Sweetness: 3/5</span>
+              </div>
+              <h3 class="product-title">Classic Tiramisu</h3>
+              <p class="product-description">Italian savoiardi biscuits dipped in fresh double espresso, layered with whipped mascarpone cream and dusted with raw cocoa.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>Jar</small></div>
+                <button class="btn-add-order" data-name="Classic Tiramisu" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Chocolate Cake -->
+          <article class="product-card" data-category="desserts" data-price="160">
+            <div class="product-image-box">
+              <span class="product-tag">Truffle Gateau</span>
+              <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=80" alt="Belgian Truffle Chocolate Cake">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Multi-Layer Cake</span>
+                <span>Sweetness: 4/5</span>
+              </div>
+              <h3 class="product-title">Belgian Chocolate Truffle Cake</h3>
+              <p class="product-description">Moist dark chocolate sponge layered with whipped dark chocolate mousse and covered in shiny mirror chocolate glaze.</p>
+              <div class="product-footer">
+                <div class="product-price">₹160 <small>Per Slice</small></div>
+                <button class="btn-add-order" data-name="Belgian Chocolate Truffle Cake" data-price="160">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Waffles -->
+          <article class="product-card" data-category="desserts" data-price="160">
+            <div class="product-image-box">
+              <span class="product-tag">Warm Iron Baked</span>
+              <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=700&q=80" alt="Belgian Waffles with Syrup and Fruit">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Belgian Style</span>
+                <span>Sweetness: 4/5</span>
+              </div>
+              <h3 class="product-title">Warm Belgian Waffles</h3>
+              <p class="product-description">Crispy malted yeast waffles drizzled with pure maple syrup, fresh seasonal berries, and a scoop of vanilla ice cream.</p>
+              <div class="product-footer">
+                <div class="product-price">₹160 <small>2 Waffles</small></div>
+                <button class="btn-add-order" data-name="Warm Belgian Waffles" data-price="160">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Muffins -->
+          <article class="product-card" data-category="desserts" data-price="100">
+            <div class="product-image-box">
+              <span class="product-tag">Oven Warm</span>
+              <img src="https://images.unsplash.com/photo-1586985289688-ca3cf47d3e6e?auto=format&fit=crop&w=700&q=80" alt="Double Chocolate Chip Muffin">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Bakery Muffin</span>
+                <span>Sweetness: 3/5</span>
+              </div>
+              <h3 class="product-title">Choco-Chunk Muffin</h3>
+              <p class="product-description">Tall bakery-style vanilla muffin loaded with dark chocolate chunks and topped with crunchy demerara sugar crystals.</p>
+              <div class="product-footer">
+                <div class="product-price">₹100 <small>Single</small></div>
+                <button class="btn-add-order" data-name="Choco-Chunk Muffin" data-price="100">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Cookies -->
+          <article class="product-card" data-category="desserts" data-price="80">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Fresh Baked</span>
+              <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=700&q=80" alt="Chunky Chocolate Chip Cookie">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Artisan Cookie</span>
+                <span>Sweetness: 3/5</span>
+              </div>
+              <h3 class="product-title">Sea Salt Choco Cookie</h3>
+              <p class="product-description">Crispy golden edges with a soft chewy center packed with melting chocolate puddles and sprinkled with sea salt flakes.</p>
+              <div class="product-footer">
+                <div class="product-price">₹80 <small>Large Cookie</small></div>
+                <button class="btn-add-order" data-name="Sea Salt Choco Cookie" data-price="80">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Baker's Secret Ingredients -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">PURITY OF FLAVORS</span>
+          <h2>The Baker’s Secret</h2>
+          <p>We believe great pastry requires great provenance. No shortcuts, premixes, or artificial flavorings.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🍫</div>
+            <h3>Belgian Couverture</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">We exclusively melt authentic Belgian Callebaut chocolate containing pure cocoa butter for silky mouthfeel.</p>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🧈</div>
+            <h3>French Cultured Butter</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">84% butterfat European cultured butter gives our croissants, waffles, and crusts their unmatched golden flakiness.</p>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🍦</div>
+            <h3>Madagascar Vanilla</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted);">Whole Bourbon vanilla beans hand-scraped into our custards and whipped creams for deep floral warmth.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

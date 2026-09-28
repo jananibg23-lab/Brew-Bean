@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Brew & Bean – Café Interiors, Latte Art, Pastries & Gatherings</title>
+  <meta name="description" content="Visual glimpses into the Brew & Bean experience. Browse our photo gallery of sunlit interiors, master barista pour-overs, artisan desserts, and acoustic evenings.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Responsive CSS Grid Gallery with Interactive JavaScript Lightbox</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html" class="active">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html" class="active">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80" alt="Café interior" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Photo Gallery</span>
+        </div>
+        <h1>The Visual Gallery</h1>
+        <p>A peek inside our coffee house — where warmth, aesthetic tranquility, and culinary passion meet.</p>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <!-- Filter Tabs -->
+        <div class="filter-tabs-wrapper" style="margin-bottom: 3rem;">
+          <button class="filter-btn gallery-filter-btn active" data-filter="all">ALL PHOTOS</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="interior">CAFÉ INTERIOR</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="coffee">COFFEE & CRAFT</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="food">FOOD & BITES</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="desserts">DESSERTS</button>
+          <button class="filter-btn gallery-filter-btn" data-filter="events">EVENTS & MUSIC</button>
+        </div>
+
+        <!-- CSS Grid Gallery -->
+        <div class="gallery-grid" id="mainGalleryGrid">
+          
+          <!-- Item 1: Interior -->
+          <div class="gallery-item" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Main dining area with warm lighting">
+            <div class="gallery-overlay">
+              <h4>Warm Main Dining Hall</h4>
+              <span>Café Interior · Bengaluru</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Coffee -->
+          <div class="gallery-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=80" alt="Cappuccino rosette latte art">
+            <div class="gallery-overlay">
+              <h4>Rosette Latte Art</h4>
+              <span>Specialty Coffee · Pour</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Interior -->
+          <div class="gallery-item" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80" alt="Reading nook and wooden study tables">
+            <div class="gallery-overlay">
+              <h4>The Quiet Study Corner</h4>
+              <span>Café Interior · Cozy Nook</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Food -->
+          <div class="gallery-item" data-category="food">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=800&q=80" alt="Gourmet sourdough club sandwich">
+            <div class="gallery-overlay">
+              <h4>Artisan Club Sandwich</h4>
+              <span>Gourmet Kitchen · Lunch</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Desserts -->
+          <div class="gallery-item" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80" alt="Blueberry cheesecake with fruit compote">
+            <div class="gallery-overlay">
+              <h4>Blueberry Basque Cheesecake</h4>
+              <span>Patisserie · Signature</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Coffee -->
+          <div class="gallery-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Barista manual pour-over brew">
+            <div class="gallery-overlay">
+              <h4>Slow V60 Extraction</h4>
+              <span>Barista Craft · Single Origin</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Events -->
+          <div class="gallery-item" data-category="events">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Live acoustic musician performing">
+            <div class="gallery-overlay">
+              <h4>Friday Acoustic Evenings</h4>
+              <span>Café Events · Live Music</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Desserts -->
+          <div class="gallery-item" data-category="desserts">
+            <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80" alt="Warm walnut chocolate brownie">
+            <div class="gallery-overlay">
+              <h4>Belgian Chocolate Fudge Brownie</h4>
+              <span>Patisserie · Warm Dessert</span>
+            </div>
+          </div>
+
+          <!-- Item 9: Food -->
+          <div class="gallery-item" data-category="food">
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Flaky golden croissants">
+            <div class="gallery-overlay">
+              <h4>Fresh French Butter Croissants</h4>
+              <span>Morning Bakery · Viennoiserie</span>
+            </div>
+          </div>
+
+          <!-- Item 10: Coffee -->
+          <div class="gallery-item" data-category="coffee">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=80" alt="Iced cold coffee with cream">
+            <div class="gallery-overlay">
+              <h4>Chilled Vanilla Cold Coffee</h4>
+              <span>Summer Brew · Refreshing</span>
+            </div>
+          </div>
+
+          <!-- Item 11: Events -->
+          <div class="gallery-item" data-category="events">
+            <img src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=800&q=80" alt="Coffee tasting and sensory cupping session">
+            <div class="gallery-overlay">
+              <h4>Saturday Coffee Cupping</h4>
+              <span>Workshop · Sensory Science</span>
+            </div>
+          </div>
+
+          <!-- Item 12: Interior -->
+          <div class="gallery-item" data-category="interior">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Brewing counter with coffee accessories">
+            <div class="gallery-overlay">
+              <h4>The Espresso Bar & Roastery</h4>
+              <span>Café Interior · Coffee Bar</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-modal" id="galleryLightbox" role="dialog" aria-label="Image Preview Lightbox">
+      <div class="lightbox-content">
+        <button class="lightbox-close" id="lightboxCloseBtn" title="Close Lightbox">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrevBtn" title="Previous Image">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNextBtn" title="Next Image">&#10095;</button>
+        <img src="" alt="" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Floating Order Drawer Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

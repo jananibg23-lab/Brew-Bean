@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew & Bean | Premium Modern Café – Where Every Cup Tells a Story</title>
+  <meta name="description" content="Brew & Bean is a premium modern café offering freshly brewed artisanal coffees, gourmet bites, decadent desserts and a warm aesthetic sanctuary in Bengaluru.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Project Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Designed with Semantic HTML5, Modern CSS3 & Vanilla JavaScript</span>
+  </aside>
+
+  <!-- Sticky Header & Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html" class="active">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Action Buttons -->
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <a href="reservation.html" class="btn btn-primary btn-sm" style="display: none; @media(min-width: 1081px){display: inline-flex;}">Book Table</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+      <button class="btn btn-secondary cart-open-trigger" style="width: 100%;">View Order Tray (<span class="cart-badge-count">0</span>)</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Brew & Bean Cozy Café Ambience" class="hero-bg">
+      <div class="hero-overlay"></div>
+      
+      <div class="container hero-content">
+        <div class="hero-badge-tag">
+          <span>✦</span> Artisan Roastery & Coffee House <span>✦</span>
+        </div>
+        <h1 class="hero-title">BREW & BEAN</h1>
+        <p class="hero-tagline">“Where Every Cup Tells a Story”</p>
+        <p class="hero-description">
+          Discover freshly brewed coffee, delicious bites and a cozy atmosphere made for meaningful moments. Handcrafted single-origin blends served in an elegant, soothing sanctuary.
+        </p>
+        
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary">EXPLORE MENU</a>
+          <a href="reservation.html" class="btn btn-secondary">RESERVE A TABLE</a>
+        </div>
+
+        <div class="hero-highlights">
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-number">100%</div>
+            <div class="hero-highlight-label">Arabica Beans</div>
+          </div>
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-number">50+</div>
+            <div class="hero-highlight-label">Curated Recipes</div>
+          </div>
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-number">4.9 ★</div>
+            <div class="hero-highlight-label">Customer Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section A: Welcome to Brew & Bean -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+          <div>
+            <span class="kicker">WELCOME TO OUR CAFÉ</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.25rem;">A Sanctuary For Coffee Lovers & Dreamers</h2>
+            <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              Step into <strong>Brew & Bean</strong>, where the rich aroma of freshly roasted beans welcomes you at the door. Founded in 2021, our café is envisioned as more than a coffee shop—it is a serene space where conversations flow effortlessly, ideas spark over steaming mugs, and friends gather in warmth.
+            </p>
+            <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7; margin-bottom: 2rem;">
+              Every morning, our certified master baristas calibrate our espresso grinders, froth organic velvety milk to silky microfoam perfection, and handcraft warm pastries made with European butter and Belgian chocolate.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="about.html" class="btn btn-dark">Our Full Story</a>
+              <a href="coffee.html" class="btn btn-outline-dark">Explore Our Brews</a>
+            </div>
+          </div>
+
+          <div style="position: relative;">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); border: 2px solid #ffffff;">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=900&q=80" alt="Barista preparing artisan pour over coffee" style="width: 100%; height: 420px; object-fit: cover;">
+            </div>
+            <div style="position: absolute; bottom: -20px; left: -20px; background-color: var(--color-espresso-900); color: #ffffff; padding: 1.25rem 1.75rem; border-radius: var(--radius-md); box-shadow: var(--shadow-lg); border-left: 4px solid var(--color-caramel-500); max-width: 250px;">
+              <div style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--color-caramel-400);">Daily Fresh Roast</div>
+              <div style="font-size: 0.8rem; color: #d6cac0;">Sourced sustainably from Chikmagalur & Coorg highlands.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Why Choose Us? (4 Feature Cards) -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">THE BREW & BEAN DIFFERENCE</span>
+          <h2>Why Choose Brew & Bean?</h2>
+          <p>We believe that exceptional coffee is an art form requiring discipline, passion, and the finest natural ingredients.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">♨</div>
+            <h3>Freshly Brewed</h3>
+            <p>Every single cup is extracted on order from freshly ground whole beans within 30 seconds of grinding for optimal aroma and flavor.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">✦</div>
+            <h3>Premium Ingredients</h3>
+            <p>100% grade-A shade-grown Arabica, farm-fresh milk, organic vanillas, and authentic Belgian cocoa. No artificial syrups or preservatives.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">🛋</div>
+            <h3>Cozy Atmosphere</h3>
+            <p>Thoughtfully designed warm interior lighting, comfortable plush seating, quiet study nooks, soft jazz, and lightning-fast Wi-Fi.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon-wrapper">☕</div>
+            <h3>Friendly Service</h3>
+            <p>Our team of dedicated baristas treats every guest like family, greeting you with genuine warmth and tailoring your cup to your exact liking.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Popular Picks (6 Products) -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">CUSTOMER FAVORITES</span>
+          <h2>Our Most Popular Picks</h2>
+          <p>Handpicked classics that keep our guests coming back day after day. Prepared fresh and served with care.</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Item 1: Cappuccino -->
+          <article class="product-card" data-category="coffee" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Bestseller</span>
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80" alt="Creamy Artisanal Cappuccino">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Specialty Coffee</span>
+                <span>Rich & Balanced</span>
+              </div>
+              <h3 class="product-title">Cappuccino</h3>
+              <p class="product-description">A double shot of espresso crowned with dense velvety microfoam and dusted with aromatic cocoa powder.</p>
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Cappuccino" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 2: Caramel Latte -->
+          <article class="product-card" data-category="coffee" data-price="160">
+            <div class="product-image-box">
+              <span class="product-tag">Chef's Choice</span>
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" alt="Sweet Silky Caramel Latte">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Flavored Espresso</span>
+                <span>Sweet & Smooth</span>
+              </div>
+              <h3 class="product-title">Caramel Latte</h3>
+              <p class="product-description">Smooth blonde espresso combined with steamed milk and drizzled with slow-cooked artisanal golden caramel.</p>
+              <div class="product-footer">
+                <div class="product-price">₹160 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Caramel Latte" data-price="160">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 3: Cold Coffee -->
+          <article class="product-card" data-category="cold drinks" data-price="150">
+            <div class="product-image-box">
+              <span class="product-tag">Refreshing</span>
+              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Creamy Chilled Cold Coffee">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Iced Classic</span>
+                <span>Creamy & Chilled</span>
+              </div>
+              <h3 class="product-title">Cold Coffee</h3>
+              <p class="product-description">Chilled double-shot espresso blended vigorously with creamy milk, brown demerara sugar, and vanilla ice cream.</p>
+              <div class="product-footer">
+                <div class="product-price">₹150 <small>Tall Glass</small></div>
+                <button class="btn-add-order" data-name="Cold Coffee" data-price="150">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 4: Chocolate Brownie -->
+          <article class="product-card" data-category="desserts" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Decadent</span>
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80" alt="Fudgy Warm Chocolate Brownie">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Warm Bakery</span>
+                <span>Fudgy Chocolate</span>
+              </div>
+              <h3 class="product-title">Chocolate Brownie</h3>
+              <p class="product-description">Gooey, dense Belgian dark chocolate brownie topped with toasted walnut crunch and warm chocolate fudge sauce.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Per Slice</small></div>
+                <button class="btn-add-order" data-name="Chocolate Brownie" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 5: Club Sandwich -->
+          <article class="product-card" data-category="food" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag">Savory Bite</span>
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" alt="Toasted Gourmet Club Sandwich">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Gourmet Bread</span>
+                <span>Fresh & Toasted</span>
+              </div>
+              <h3 class="product-title">Club Sandwich</h3>
+              <p class="product-description">Triple-decker toasted sourdough layered with crisp garden greens, cheddar cheese, sliced tomatoes and herb mayo.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>With Fries</small></div>
+                <button class="btn-add-order" data-name="Club Sandwich" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Item 6: Blueberry Cheesecake -->
+          <article class="product-card" data-category="desserts" data-price="190">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Crowd Favorite</span>
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="Silky Blueberry Cheesecake">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Patisserie</span>
+                <span>Silky & Tangy</span>
+              </div>
+              <h3 class="product-title">Blueberry Cheesecake</h3>
+              <p class="product-description">New York style cream cheese cake on a spiced graham cracker crust, blanketed with wild blueberry compote.</p>
+              <div class="product-footer">
+                <div class="product-price">₹190 <small>Per Slice</small></div>
+                <button class="btn-add-order" data-name="Blueberry Cheesecake" data-price="190">Add to Order</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="menu.html" class="btn btn-dark">View Complete Café Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section D: Café Experience Section -->
+    <section class="section-padding" style="background-color: var(--color-espresso-900); color: #ffffff;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+          <div>
+            <span class="kicker">SENSORY JOURNEY</span>
+            <h2 style="color: #ffffff; font-size: clamp(2rem, 3.5vw, 2.75rem); margin-bottom: 1.25rem;">The Brew & Bean Experience</h2>
+            <p style="color: #d6cac0; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              When you enter Brew & Bean, the rush of the city fades away into the soothing cadence of steam wands, mellow acoustic guitar melodies, and the warm clinking of ceramic cups.
+            </p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+              <li style="display: flex; align-items: flex-start; gap: 0.8rem; color: #e6ded6;">
+                <span style="color: var(--color-caramel-400); font-weight: bold; font-size: 1.2rem;">✓</span>
+                <span><strong>Acoustic Sanctuary:</strong> Carefully curated playlists that inspire productivity, deep focus, and heartfelt conversations.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.8rem; color: #e6ded6;">
+                <span style="color: var(--color-caramel-400); font-weight: bold; font-size: 1.2rem;">✓</span>
+                <span><strong>Study & Remote Work Ready:</strong> Ergonomic chairs, power outlets under every table, and robust high-speed Wi-Fi.</span>
+              </li>
+              <li style="display: flex; align-items: flex-start; gap: 0.8rem; color: #e6ded6;">
+                <span style="color: var(--color-caramel-400); font-weight: bold; font-size: 1.2rem;">✓</span>
+                <span><strong>Community Gatherings:</strong> Weekly open mic nights, book club meets, and barista coffee cupping workshops.</span>
+              </li>
+            </ul>
+            <a href="events.html" class="btn btn-primary">Check Upcoming Events</a>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem;">
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 260px;">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Cozy reading corner inside Brew & Bean" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 260px; margin-top: 2rem;">
+              <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=600&q=80" alt="Fresh espresso extraction" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section E: Customer Testimonials -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">TESTIMONIALS</span>
+          <h2>Loved by Coffee Enthusiasts</h2>
+          <p>Real stories and heartfelt reviews from members of our daily café community.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <!-- Testimonial 1 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="display: flex; align-items: center; justify-content: center; background: #e5ba73; color: #231710; font-weight: 700; font-size: 1.2rem;">A</div>
+              <div>
+                <div class="review-name">Ananya Sharma</div>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-quote">“Beautiful ambience and amazing coffee! The subtle lighting and wooden furnishings make it my favorite place to read after college hours.”</p>
+            <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-caramel-500); font-weight: 600;">Favorite: Caramel Latte</div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="display: flex; align-items: center; justify-content: center; background: #c58940; color: #fff; font-weight: 700; font-size: 1.2rem;">R</div>
+              <div>
+                <div class="review-name">Rahul Verma</div>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-quote">“The caramel latte was delicious and the service was genuinely excellent. The baristas really care about brewing quality and bean origins.”</p>
+            <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-caramel-500); font-weight: 600;">Favorite: Espresso & Club Sandwich</div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="review-card">
+            <div class="review-header">
+              <div class="review-avatar" style="display: flex; align-items: center; justify-content: center; background: #d4a373; color: #231710; font-weight: 700; font-size: 1.2rem;">M</div>
+              <div>
+                <div class="review-name">Meera Nair</div>
+                <div class="review-stars">★★★★★</div>
+              </div>
+            </div>
+            <p class="review-quote">“A perfect place to spend an evening with friends. Do not skip their blueberry cheesecake—it is hands down the best in the city!”</p>
+            <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-caramel-500); font-weight: 600;">Favorite: Blueberry Cheesecake</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="reviews.html" class="btn btn-outline-dark">Read All Customer Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section F: Special Offer Feature Card & Newsletter -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, var(--color-espresso-950) 0%, var(--color-espresso-850) 100%); border-radius: var(--radius-xl); padding: clamp(2rem, 5vw, 4rem); color: #ffffff; box-shadow: var(--shadow-xl); position: relative; overflow: hidden;">
+          <div style="position: absolute; right: -50px; top: -50px; font-size: 18rem; opacity: 0.04; font-family: var(--font-serif); pointer-events: none;">☕</div>
+          
+          <div style="max-width: 680px; position: relative; z-index: 2;">
+            <span style="background-color: var(--color-caramel-500); color: #ffffff; padding: 0.35rem 0.9rem; border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 1rem;">Limited Time Special</span>
+            <h2 style="color: #ffffff; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Morning Brew & Croissant Combo</h2>
+            <p style="color: #d6cac0; font-size: 1.05rem; line-height: 1.6; margin-bottom: 1.75rem;">
+              Kickstart your mornings with our signature double-shot Cappuccino or Americano paired with a warm French butter croissant for only <strong>₹199</strong> (Save ₹60). Available every morning until 11:30 AM.
+            </p>
+            
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+              <a href="offers.html" class="btn btn-primary">View All Special Offers</a>
+              <a href="reservation.html" class="btn btn-secondary">Reserve Morning Table</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription UI -->
+        <div style="margin-top: 4.5rem; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <span class="kicker">STAY CONNECTED</span>
+          <h3 style="font-size: 1.85rem; margin-bottom: 0.75rem;">Join the Brew Club Newsletter</h3>
+          <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Receive secret seasonal drink recipes, invites to coffee cupping workshops, and exclusive weekend discounts directly in your inbox.
+          </p>
+          <form class="newsletter-form" style="display: flex; gap: 0.5rem; max-width: 480px; margin: 0 auto;">
+            <input type="email" placeholder="Enter your email address" required style="flex-grow: 1; padding: 0.85rem 1.25rem; border: 1.5px solid var(--color-border); border-radius: var(--radius-sm); font-size: 0.95rem;">
+            <button type="submit" class="btn btn-dark">Subscribe</button>
+          </form>
+          <small style="color: var(--color-text-subtle); display: block; margin-top: 0.6rem; font-size: 0.78rem;">We respect your inbox. No spam, ever.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer / Tray Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar" aria-label="Order summary floating bar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal Drawer -->
+  <div class="cart-modal" id="cartModalOverlay" aria-modal="true" role="dialog" aria-label="Current Order Tray">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+
+      <div class="cart-items-list" id="cartItemsList">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+        <small style="display: block; text-align: center; color: var(--color-text-subtle); margin-top: 0.6rem; font-size: 0.75rem;">
+          BCA Project Simulation: No live financial transaction processed.
+        </small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top" aria-label="Scroll to top">↑</button>
+
+  <!-- Professional Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>
+            A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade artisanal pastries, and genuine hospitality.
+          </p>
+          <div class="footer-social-row">
+            <a href="contact.html" class="social-icon-link" aria-label="Instagram">📸</a>
+            <a href="contact.html" class="social-icon-link" aria-label="Facebook">📘</a>
+            <a href="contact.html" class="social-icon-link" aria-label="YouTube">▶️</a>
+            <a href="contact.html" class="social-icon-link" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+
+        <!-- Discover Links -->
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Hours & Contact -->
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498; line-height: 1.5;">
+            12 Coffee Lane, Koramangala<br>
+            Bengaluru, Karnataka - 560034<br>
+            Phone: +91 98765 43210
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Brew & Bean Café. All Rights Reserved.
+        </div>
+        <div class="footer-academic-tag">
+          Designed as a BCA Academic Project · Static Front-End Architecture
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialty Coffee | Brew & Bean – Espresso, Lattes, Cold Brews & Single Origins</title>
+  <meta name="description" content="Immerse yourself in Brew & Bean's specialty coffee lineup. From double espresso and velvety flat whites to slow cold brew and manual pour-overs.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Artisan Coffee Guide & Interactive Brew Chooser</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html" class="active">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html" class="active">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1600&q=80" alt="Hot espresso with steam" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Specialty Coffee</span>
+        </div>
+        <h1>The Coffee Roastery</h1>
+        <p>100% shade-grown Indian Arabica beans, expertly dialed in, freshly grounded, and brewed with precision.</p>
+      </div>
+    </section>
+
+    <!-- Interactive Section: "Choose Your Perfect Brew" -->
+    <section class="section-padding" style="background-color: #ffffff; border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">INTERACTIVE BARISTA ADVISOR</span>
+          <h2>Choose Your Perfect Brew</h2>
+          <p>What are you craving today? Select your current coffee mood to find your tailored barista recommendation.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+          <div class="feature-card brew-mood-card" style="cursor: pointer;" data-rec-name="Caramel Macchiato" data-rec-desc="Rich vanilla steamed milk marked with bold espresso shots and drizzled with slow-cooked golden caramel." data-rec-price="160">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🍯</div>
+            <h3 style="font-size: 1.15rem;">Sweet & Creamy</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Velvety textured milk with rich natural sweetness and delicate caramel notes.</p>
+          </div>
+
+          <div class="feature-card brew-mood-card" style="cursor: pointer;" data-rec-name="Double Espresso Ristretto" data-rec-desc="Concentrated 20ml extraction of high-elevation Coorg Arabica with thick crema and chocolate notes." data-rec-price="120">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">⚡</div>
+            <h3 style="font-size: 1.15rem;">Strong & Bold</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Unapologetic intensity, high caffeine punch, full body, and deep dark cocoa finish.</p>
+          </div>
+
+          <div class="feature-card brew-mood-card" style="cursor: pointer;" data-rec-name="Classic Thick Cold Coffee" data-rec-desc="Double shot espresso blended with chilled whole milk, demerara sugar, and vanilla cream over ice." data-rec-price="150">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">❄️</div>
+            <h3 style="font-size: 1.15rem;">Chilled & Refreshing</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Cooling iced drinks with smooth coffee flavors perfect for warm sunny afternoons.</p>
+          </div>
+
+          <div class="feature-card brew-mood-card" style="cursor: pointer;" data-rec-name="V60 Single-Origin Pour Over" data-rec-desc="Hand-poured slow extraction highlighting jasmine florals, citrus zest, and clean tea-like finish." data-rec-price="170">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🌸</div>
+            <h3 style="font-size: 1.15rem;">Delicate & Floral</h3>
+            <p style="font-size: 0.85rem; color: var(--color-text-muted);">Lightly roasted specialty beans brewed by hand with subtle aromatic complexity.</p>
+          </div>
+        </div>
+
+        <!-- Result Box -->
+        <div id="brewRecommendationResult" style="max-width: 650px; margin: 0 auto;"></div>
+      </div>
+    </section>
+
+    <!-- The 6 Core Coffee Categories Required by Brief -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">OUR SIGNATURE ROASTS</span>
+          <h2>The Craft Coffee Lineup</h2>
+          <p>Every beverage is calibrated to precise water temperature, grind size, and extraction yield.</p>
+        </div>
+
+        <div class="products-grid">
+          
+          <!-- 1. Espresso -->
+          <article class="product-card" data-category="coffee" data-price="110">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Pure Extraction</span>
+              <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80" alt="Espresso Extraction">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>The Foundation</span>
+                <span>Intensity: 5/5</span>
+              </div>
+              <h3 class="product-title">Artisan Espresso</h3>
+              <p class="product-description">A concentrated 30ml double shot featuring heavy golden crema, dark cocoa fragrance, and vibrant fruit acidity.</p>
+              
+              <!-- Roast / Strength Visual Bar -->
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Roast Profile: Medium-Dark · Origin: Coorg</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹110 <small>Doppio 60ml</small></div>
+                <button class="btn-add-order" data-name="Artisan Espresso" data-price="110">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Cappuccino -->
+          <article class="product-card" data-category="coffee" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Most Popular</span>
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80" alt="Cappuccino with Latte Art">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Milk & Espresso</span>
+                <span>Intensity: 3/5</span>
+              </div>
+              <h3 class="product-title">Classic Cappuccino</h3>
+              <p class="product-description">Traditional Italian recipe: 1/3 espresso, 1/3 steamed velvety milk, and 1/3 thick microfoam dusted with roasted cocoa.</p>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Roast Profile: Medium · Origin: Chikmagalur</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot"></div>
+                  <div class="bean-dot"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>200ml</small></div>
+                <button class="btn-add-order" data-name="Classic Cappuccino" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Latte -->
+          <article class="product-card" data-category="coffee" data-price="150">
+            <div class="product-image-box">
+              <span class="product-tag">Silky & Mild</span>
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" alt="Caffè Latte with Swan art">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Microfoam Velvet</span>
+                <span>Intensity: 2/5</span>
+              </div>
+              <h3 class="product-title">Caffè Latte</h3>
+              <p class="product-description">Delicately steamed farm-fresh milk gently folded over a double shot of espresso with thin, glossy latte art.</p>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Roast Profile: Blonde Light-Medium</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot"></div>
+                  <div class="bean-dot"></div>
+                  <div class="bean-dot"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹150 <small>240ml</small></div>
+                <button class="btn-add-order" data-name="Caffè Latte" data-price="150">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Mocha -->
+          <article class="product-card" data-category="coffee" data-price="170">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Belgian Chocolate</span>
+              <img src="https://images.unsplash.com/photo-1607681034540-2c46cc71896d?auto=format&fit=crop&w=700&q=80" alt="Café Mocha with Whipped Cream">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Sweet Indulgence</span>
+                <span>Intensity: 3/5</span>
+              </div>
+              <h3 class="product-title">Dark Café Mocha</h3>
+              <p class="product-description">Single-origin espresso married with melted 70% Belgian chocolate, silky steamed milk, and dark cocoa shavings.</p>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Pairing: Chocolate Brownie</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot"></div>
+                  <div class="bean-dot"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹170 <small>240ml</small></div>
+                <button class="btn-add-order" data-name="Dark Café Mocha" data-price="170">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Americano -->
+          <article class="product-card" data-category="coffee" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag">Crisp & Bold</span>
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Hot Caffè Americano">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Long Black</span>
+                <span>Intensity: 4/5</span>
+              </div>
+              <h3 class="product-title">Caffè Americano</h3>
+              <p class="product-description">Two shots of espresso gently layered over 92°C filtered water. Maintains the delicate crema and nuanced flavor notes.</p>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Roast Profile: Medium-Dark</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>220ml</small></div>
+                <button class="btn-add-order" data-name="Caffè Americano" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Cold Coffee -->
+          <article class="product-card" data-category="coffee" data-price="150">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Summer Favorite</span>
+              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Iced Cold Coffee Frappe">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Chilled Frappe</span>
+                <span>Intensity: 3/5</span>
+              </div>
+              <h3 class="product-title">House Cold Coffee</h3>
+              <p class="product-description">Whipped espresso frappe with cold milk, cane demerara sugar syrup, and a scoop of artisanal Madagascar vanilla gelato.</p>
+              
+              <div style="margin-bottom: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--color-text-subtle); margin-bottom: 3px;">Sweet & Creamy Frappe</div>
+                <div class="strength-indicator">
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot active"></div>
+                  <div class="bean-dot"></div>
+                  <div class="bean-dot"></div>
+                </div>
+              </div>
+
+              <div class="product-footer">
+                <div class="product-price">₹150 <small>350ml Tall</small></div>
+                <button class="btn-add-order" data-name="House Cold Coffee" data-price="150">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Brewing Methods Guide -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">MANUAL BREWING MASTERY</span>
+          <h2>Slow Coffee & Manual Methods</h2>
+          <p>For purists seeking clarity and terroir. We offer manual brewing at our bar every day.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⚗️</div>
+            <h3>V60 Pour Over</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.8rem;">Spiral cone with ribbed ridges and paper filter for the clearest tea-like body and bright acidity.</p>
+            <div style="font-weight: 700; color: var(--color-caramel-500);">₹170</div>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⏳</div>
+            <h3>AeroPress</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.8rem;">Air-pressure immersion extraction yielding a rich, juicy cup with intense sweetness and low bitterness.</p>
+            <div style="font-weight: 700; color: var(--color-caramel-500);">₹160</div>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🫖</div>
+            <h3>French Press</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.8rem;">Full immersion coarse grind steeped for 4 minutes with metal mesh filtering for heavy, buttery mouthfeel.</p>
+            <div style="font-weight: 700; color: var(--color-caramel-500);">₹150</div>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🧊</div>
+            <h3>18h Cold Drip</h3>
+            <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 0.8rem;">Slow gravity drip over 18 hours yielding zero bitterness, gentle acidity, and rich dark chocolate sweetness.</p>
+            <div style="font-weight: 700; color: var(--color-caramel-500);">₹180</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

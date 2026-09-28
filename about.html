@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Brew & Bean Café – Our Story, Mission & Passion</title>
+  <meta name="description" content="Discover the journey of Brew & Bean, founded in 2021 in Bengaluru with a vision to provide artisanal coffees, comfortable spaces, and sustainable roasting.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Semantic HTML5 & CSS3 Responsive Implementation</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html" class="active">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80" alt="Pour over coffee and coffee beans" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>About Us</span>
+        </div>
+        <h1>Our Story & Ethos</h1>
+        <p>Crafting memorable coffee rituals and building a warm sanctuary for human connection since 2021.</p>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem; align-items: center;">
+          <div>
+            <span class="kicker">HOW IT ALL BEGAN</span>
+            <h2 style="font-size: clamp(2rem, 3.5vw, 2.6rem); margin-bottom: 1.25rem;">Born From a Deep Love for the Humble Coffee Bean</h2>
+            <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7; margin-bottom: 1.25rem;">
+              Brew & Bean was founded with a singular conviction: that coffee is not just a morning caffeine fix, but a grounding ritual and a conduit for human connection. In a world moving at breakneck speed, we wanted to build a haven where people could slow down and savor the craftsmanship in every sip.
+            </p>
+            <p style="color: var(--color-text-muted); font-size: 1.02rem; line-height: 1.7; margin-bottom: 1.5rem;">
+              We began by partnering directly with smallholder coffee farmers in the misty hills of Chikmagalur and Coorg, ensuring ethical fair-trade practices and shade-grown cultivation that protects biodiversity.
+            </p>
+            <div style="background-color: var(--color-cream-200); border-left: 4px solid var(--color-caramel-500); padding: 1.25rem; border-radius: var(--radius-sm); font-style: italic; color: var(--color-espresso-900);">
+              “We don’t just pour espresso shots; we nurture conversations, provide quiet reading sanctuaries, and build lifelong friendships around freshly ground coffee.”
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <img src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=600&q=80" alt="Coffee beans selection" style="border-radius: var(--radius-md); height: 260px; width: 100%; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Café interior seating" style="border-radius: var(--radius-md); height: 260px; width: 100%; object-fit: cover; margin-top: 2rem;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission, Vision & Values -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">OUR PILLARS</span>
+          <h2>Mission, Vision & Core Values</h2>
+          <p>The guiding principles that shape our drinks, our team culture, and our guest experience.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+          <div class="feature-card" style="text-align: left;">
+            <div class="feature-icon-wrapper" style="margin: 0 0 1.25rem 0;">🎯</div>
+            <h3>Our Mission</h3>
+            <p>To serve impeccably sourced, precision-roasted specialty coffee alongside warm, wholesome bites in an inclusive and comforting environment where every customer feels cherished.</p>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div class="feature-icon-wrapper" style="margin: 0 0 1.25rem 0;">🌟</div>
+            <h3>Our Vision</h3>
+            <p>To become Karnataka's most respected neighborhood café collective, recognized for elevating Indian specialty coffee beans and creating thriving cultural community spaces.</p>
+          </div>
+
+          <div class="feature-card" style="text-align: left;">
+            <div class="feature-icon-wrapper" style="margin: 0 0 1.25rem 0;">🌱</div>
+            <h3>Our Values</h3>
+            <p>Uncompromising quality, environmental sustainability, complete transparency with our farmers, continuous barista education, and heartfelt kindness in every guest interaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Coffee Varieties & Blends</p>
+        </div>
+        <div class="stat-item">
+          <h3>10K+</h3>
+          <p>Happy Customers Served</p>
+        </div>
+        <div class="stat-item">
+          <h3>20+</h3>
+          <p>Artisan Menu Items</p>
+        </div>
+        <div class="stat-item">
+          <h3>5+</h3>
+          <p>Years of Unmatched Passion</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive History Timeline -->
+    <section class="section-padding" style="background-color: var(--color-cream-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">OUR JOURNEY</span>
+          <h2>The Brew & Bean Timeline</h2>
+          <p>Milestones that define our growth from a passion project to a bustling neighborhood haven.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- 2021 -->
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <span class="timeline-year">2021</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Brew & Bean Was Founded</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+                Conceptualized during late-night cupping sessions by coffee lovers determined to bring specialty micro-lot beans directly from plantation estates.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <span class="timeline-year">2022</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">First Flagship Café Opened</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+                Opened our doors at Coffee Lane in Bengaluru with 12 handcrafted wooden tables, a custom La Marzocco espresso machine, and an open baking counter.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-container left">
+            <div class="timeline-content">
+              <span class="timeline-year">2024</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Expanded The Gourmet Menu</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+                Introduced sourdough club sandwiches, artisanal Belgian chocolate desserts, artisanal tea infusions, and our signature cold brews.
+              </p>
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div class="timeline-container right">
+            <div class="timeline-content">
+              <span class="timeline-year">2026</span>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Growing Into a Community Hub</h3>
+              <p style="font-size: 0.9rem; color: var(--color-text-muted);">
+                Celebrating over 10,000 satisfied patrons, weekly live acoustic events, weekend barista workshops, and sustainable compost initiatives.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Master Baristas & Team -->
+    <section class="section-padding" style="background-color: #ffffff; border-top: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">THE CRAFTSPEOPLE</span>
+          <h2>Meet Our Barista Masters</h2>
+          <p>Passionate coffee artisans dedicated to brewing your perfect cup every single morning.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem;">
+          <!-- Barista 1 -->
+          <div style="background: var(--color-cream-100); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); text-align: center; padding-bottom: 1.5rem;">
+            <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=600&q=80" alt="Head Barista Aryan" style="width: 100%; height: 260px; object-fit: cover; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.2rem;">Aryan Sen</h3>
+            <span style="font-size: 0.8rem; color: var(--color-caramel-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Head Barista & Roaster</span>
+            <p style="color: var(--color-text-muted); font-size: 0.88rem; padding: 0.5rem 1rem 0;">Certified Q-Grader with 8 years of specialty brewing and pour-over expertise.</p>
+          </div>
+
+          <!-- Barista 2 -->
+          <div style="background: var(--color-cream-100); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); text-align: center; padding-bottom: 1.5rem;">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80" alt="Pastry Chef Maya" style="width: 100%; height: 260px; object-fit: cover; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.2rem;">Maya Kulkarni</h3>
+            <span style="font-size: 0.8rem; color: var(--color-caramel-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Executive Pastry Chef</span>
+            <p style="color: var(--color-text-muted); font-size: 0.88rem; padding: 0.5rem 1rem 0;">Master of French viennoiserie, sourdough fermentation, and artisan cheesecakes.</p>
+          </div>
+
+          <!-- Barista 3 -->
+          <div style="background: var(--color-cream-100); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--color-border); text-align: center; padding-bottom: 1.5rem;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Hospitality Lead Divya" style="width: 100%; height: 260px; object-fit: cover; margin-bottom: 1rem;">
+            <h3 style="font-size: 1.2rem;">Divya Rao</h3>
+            <span style="font-size: 0.8rem; color: var(--color-caramel-500); text-transform: uppercase; letter-spacing: 1px; font-weight: 600;">Hospitality & Community Lead</span>
+            <p style="color: var(--color-text-muted); font-size: 0.88rem; padding: 0.5rem 1rem 0;">Curator of our weekly open mics, reading clubs, and warm guest welcomes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer & Modals -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food & Snacks | Brew & Bean – Sourdough Sandwiches, Pastas, Burgers & Croissants</title>
+  <meta name="description" content="Savor artisanal café fare at Brew & Bean. Freshly pressed gourmet sandwiches, buttery French croissants, creamy pasta, burgers and crispy peri-peri fries.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Artisanal Kitchen Showcase & Coffee Pairing Guide</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html" class="active">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html" class="active">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1600&q=80" alt="Gourmet toasted sandwich" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Food & Snacks</span>
+        </div>
+        <h1>Gourmet Food & Savory Bites</h1>
+        <p>Freshly baked breads, farm-to-table vegetables, melted cheeses, and recipes designed to elevate your coffee cup.</p>
+      </div>
+    </section>
+
+    <!-- Food Products Grid -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">KITCHEN SPECIALS</span>
+          <h2>Savory Café Favorites</h2>
+          <p>Prepared to order using artisanal fermented doughs and locally sourced ingredients.</p>
+        </div>
+
+        <div class="products-grid">
+          
+          <!-- 1. Sandwiches: Signature Club Sandwich -->
+          <article class="product-card" data-category="food" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Top Choice</span>
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" alt="Club Sandwich with Crispy Chips">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Sandwiches</span>
+                <span>Toasted Sourdough</span>
+              </div>
+              <h3 class="product-title">Artisan Club Sandwich</h3>
+              <p class="product-description">Triple-tier toasted sourdough layered with grilled herb paneer or chicken, avocado spread, English cheddar, and garden greens.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>With Kettle Chips</small></div>
+                <button class="btn-add-order" data-name="Artisan Club Sandwich" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Burgers: Gourmet Brioche Burger -->
+          <article class="product-card" data-category="food" data-price="190">
+            <div class="product-image-box">
+              <span class="product-tag">Gourmet Burger</span>
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Truffle Mushroom Burger">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Burgers</span>
+                <span>Butter Brioche Bun</span>
+              </div>
+              <h3 class="product-title">Truffle Veggie Burger</h3>
+              <p class="product-description">Crispy quinoa and lentil patty topped with smoked provolone, truffle mushroom tapenade, caramelized onions, and house remoulade.</p>
+              <div class="product-footer">
+                <div class="product-price">₹190 <small>With Potato Wedges</small></div>
+                <button class="btn-add-order" data-name="Truffle Veggie Burger" data-price="190">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Pasta: Creamy Alfredo Penne -->
+          <article class="product-card" data-category="food" data-price="210">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Italian Special</span>
+              <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281699?auto=format&fit=crop&w=700&q=80" alt="Creamy Alfredo Penne Pasta">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Pasta</span>
+                <span>Parmigiano Reggiano</span>
+              </div>
+              <h3 class="product-title">Creamy Alfredo Penne</h3>
+              <p class="product-description">Durum wheat penne in slow-simmered heavy cream, crushed roasted garlic, sautéed cremini mushrooms, and cracked black pepper.</p>
+              <div class="product-footer">
+                <div class="product-price">₹210 <small>With Garlic Bread</small></div>
+                <button class="btn-add-order" data-name="Creamy Alfredo Penne" data-price="210">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Croissants: French Butter Croissant -->
+          <article class="product-card" data-category="food" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag">Bakery Fresh</span>
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Flaky Butter Croissant">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Viennoiserie</span>
+                <span>Warm & Flaky</span>
+              </div>
+              <h3 class="product-title">French Butter Croissant</h3>
+              <p class="product-description">Classic 27-layer laminated puff pastry rolled with European cultured butter, golden honey glaze, and delicate honeycomb interior.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Served Warm</small></div>
+                <button class="btn-add-order" data-name="French Butter Croissant" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Garlic Bread: Cheesy Baguette -->
+          <article class="product-card" data-category="food" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag">Comfort Food</span>
+              <img src="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=700&q=80" alt="Toasted Cheesy Garlic Bread">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Warm Snack</span>
+                <span>Melted Mozzarella</span>
+              </div>
+              <h3 class="product-title">Cheesy Garlic Baguette</h3>
+              <p class="product-description">Crusty artisan baguette brushed with homemade roasted garlic herb butter, smothered under molten mozzarella and oregano.</p>
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>4 Thick Slices</small></div>
+                <button class="btn-add-order" data-name="Cheesy Garlic Baguette" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. French Fries: Peri-Peri Crisps -->
+          <article class="product-card" data-category="food" data-price="130">
+            <div class="product-image-box">
+              <span class="product-tag">Crispy Delight</span>
+              <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=700&q=80" alt="Peri-Peri French Fries">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Sides & Snacks</span>
+                <span>Signature Spice</span>
+              </div>
+              <h3 class="product-title">Peri-Peri Crisp Fries</h3>
+              <p class="product-description">Double-fried golden Russet potato batons dusted in fiery African bird's eye chili spice with cool mint cilantro dip.</p>
+              <div class="product-footer">
+                <div class="product-price">₹130 <small>Generous Basket</small></div>
+                <button class="btn-add-order" data-name="Peri-Peri Crisp Fries" data-price="130">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- "Perfect Pairings" Section -->
+    <section class="section-padding" style="background-color: var(--color-espresso-900); color: #ffffff;">
+      <div class="container">
+        <div class="section-header">
+          <span class="kicker">SOMMELIER GUIDE</span>
+          <h2 style="color: #ffffff;">The Perfect Pairings</h2>
+          <p style="color: #d6cac0;">Elevate your culinary journey. Discover how our culinary team pairs savory bites with specialty roasts.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+          <!-- Pairing 1 -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-md); padding: 2rem; position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span style="font-size: 1.8rem;">☕ + 🥐</span>
+              <span style="background: var(--color-caramel-500); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px;">Morning Classic</span>
+            </div>
+            <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 0.5rem;">Cappuccino & Butter Croissant</h3>
+            <p style="color: #d6cac0; font-size: 0.92rem; line-height: 1.6;">
+              The rich milky froth and dark roast of the cappuccino cuts effortlessly through the buttery, laminated flaky crumb of the warm croissant.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem;">
+              <span style="font-weight: 700; color: var(--color-caramel-400); font-size: 1.15rem;">Combo Price: ₹199</span>
+              <a href="offers.html" class="btn btn-primary btn-sm">View Offer</a>
+            </div>
+          </div>
+
+          <!-- Pairing 2 -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-md); padding: 2rem; position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span style="font-size: 1.8rem;">🧊 + 🥪</span>
+              <span style="background: var(--color-caramel-500); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px;">Lunch Power Trio</span>
+            </div>
+            <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 0.5rem;">Iced Americano & Club Sandwich</h3>
+            <p style="color: #d6cac0; font-size: 0.92rem; line-height: 1.6;">
+              Crisp citrus acidity of an iced long black refreshes the palate between toasted mouthfuls of cheddar, roasted vegetables, and sourdough.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem;">
+              <span style="font-weight: 700; color: var(--color-caramel-400); font-size: 1.15rem;">Combo Price: ₹279</span>
+              <a href="offers.html" class="btn btn-primary btn-sm">View Offer</a>
+            </div>
+          </div>
+
+          <!-- Pairing 3 -->
+          <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: var(--radius-md); padding: 2rem; position: relative;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+              <span style="font-size: 1.8rem;">☕ + 🥖</span>
+              <span style="background: var(--color-caramel-500); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px;">Evening Snack</span>
+            </div>
+            <h3 style="color: #ffffff; font-size: 1.3rem; margin-bottom: 0.5rem;">Pour Over & Cheesy Garlic Bread</h3>
+            <p style="color: #d6cac0; font-size: 0.92rem; line-height: 1.6;">
+              The clean, floral nuances of a light roast V60 brew provide a refreshing contrast to warm roasted garlic and rich stringy mozzarella.
+            </p>
+            <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 1rem;">
+              <span style="font-weight: 700; color: var(--color-caramel-400); font-size: 1.15rem;">Combo Price: ₹280</span>
+              <a href="offers.html" class="btn btn-primary btn-sm">View Offer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>

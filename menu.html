@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Menu | Brew & Bean – Fresh Coffee, Teas, Gourmet Bites & Desserts</title>
+  <meta name="description" content="Explore the full handcrafted menu at Brew & Bean. Filter through single-origin espresso drinks, artisan loose-leaf teas, sourdough sandwiches, and desserts.">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Academic BCA Notice Bar -->
+  <aside class="academic-notice-bar" aria-label="Academic Project Info">
+    <span>☕ <strong>Brew & Bean Café</strong> – Academic BCA Static Web Project</span>
+    <span>•</span>
+    <span>Interactive Front-End Menu Filtering & Order Tray Simulation</span>
+  </aside>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Brew and Bean Home">
+        <span class="brand-icon">☕</span>
+        <div class="brand-text">
+          <span class="brand-name">BREW <span>&</span> BEAN</span>
+          <span class="brand-tagline">Est. 2021 · Artisan Café</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="about.html">About</a></li>
+          <li class="nav-item"><a href="menu.html" class="active">Menu</a></li>
+          <li class="nav-item"><a href="coffee.html">Coffee</a></li>
+          <li class="nav-item"><a href="food.html">Food</a></li>
+          <li class="nav-item"><a href="desserts.html">Desserts</a></li>
+          <li class="nav-item"><a href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a href="offers.html">Offers</a></li>
+          <li class="nav-item"><a href="events.html">Events</a></li>
+          <li class="nav-item"><a href="reservation.html">Reservation</a></li>
+          <li class="nav-item"><a href="reviews.html">Reviews</a></li>
+          <li class="nav-item"><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-icon-btn cart-open-trigger" aria-label="View Order Tray" title="View Order Tray">
+          🛒
+          <span class="cart-badge cart-badge-count">0</span>
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNav">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="menu.html" class="active">Full Menu</a></li>
+      <li><a href="coffee.html">Specialty Coffee</a></li>
+      <li><a href="food.html">Food & Snacks</a></li>
+      <li><a href="desserts.html">Artisan Desserts</a></li>
+      <li><a href="gallery.html">Photo Gallery</a></li>
+      <li><a href="offers.html">Special Offers</a></li>
+      <li><a href="events.html">Café Events</a></li>
+      <li><a href="reservation.html">Table Reservation</a></li>
+      <li><a href="reviews.html">Customer Reviews</a></li>
+      <li><a href="contact.html">Contact & Hours</a></li>
+    </ul>
+    <a href="reservation.html" class="btn btn-primary" style="width: 100%;">Book a Table</a>
+  </div>
+
+  <main>
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=80" alt="Café counter and menu" class="page-banner-bg">
+      <div class="page-banner-overlay"></div>
+      <div class="container page-banner-content">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span> <span>Café Menu</span>
+        </div>
+        <h1>Our Handcrafted Menu</h1>
+        <p>From micro-lot coffees and artisanal teas to warm sourdough sandwiches and freshly baked patisserie treats.</p>
+      </div>
+    </section>
+
+    <!-- Menu Showcase Section with Filtering -->
+    <section class="section-padding">
+      <div class="container">
+        
+        <!-- Live Search Box -->
+        <div class="menu-search-box">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="menuSearchInput" class="menu-search-input" placeholder="Search coffee, tea, food, or dessert..." aria-label="Search menu">
+        </div>
+
+        <!-- Category Filtering Buttons -->
+        <div class="filter-tabs-wrapper" role="tablist">
+          <button class="filter-btn menu-filter-btn active" data-filter="all">ALL ITEMS</button>
+          <button class="filter-btn menu-filter-btn" data-filter="coffee">COFFEE</button>
+          <button class="filter-btn menu-filter-btn" data-filter="tea">TEA</button>
+          <button class="filter-btn menu-filter-btn" data-filter="food">FOOD & SNACKS</button>
+          <button class="filter-btn menu-filter-btn" data-filter="desserts">DESSERTS</button>
+          <button class="filter-btn menu-filter-btn" data-filter="cold drinks">COLD DRINKS</button>
+        </div>
+
+        <!-- Empty State (hidden by default) -->
+        <div id="menuEmptyState" style="display: none; text-align: center; padding: 4rem 1rem;">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">☕</div>
+          <h3 style="font-size: 1.5rem; color: var(--color-espresso-900); margin-bottom: 0.5rem;">No menu items matched your search</h3>
+          <p style="color: var(--color-text-muted);">Try a different keyword or reset your category filter above.</p>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="products-grid" id="menuGrid">
+          
+          <!-- COFFEE: Espresso -->
+          <article class="product-card menu-filterable-item" data-category="coffee" data-price="110">
+            <div class="product-image-box">
+              <span class="product-tag">Single Origin</span>
+              <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=700&q=80" alt="Double Espresso Shot">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee · Hot</span>
+                <span>Bold & Intense</span>
+              </div>
+              <h3 class="product-title">Classic Espresso</h3>
+              <p class="product-description">A rich, concentrated double extraction with thick hazelnut crema and subtle chocolate undertones.</p>
+              <div class="product-footer">
+                <div class="product-price">₹110 <small>Doppio</small></div>
+                <button class="btn-add-order" data-name="Classic Espresso" data-price="110">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COFFEE: Cappuccino -->
+          <article class="product-card menu-filterable-item" data-category="coffee" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Top Seller</span>
+              <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=80" alt="Artisanal Cappuccino">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee · Hot</span>
+                <span>Creamy & Balanced</span>
+              </div>
+              <h3 class="product-title">Artisan Cappuccino</h3>
+              <p class="product-description">Equal parts espresso, steamed milk, and airy microfoam dusted with dark cinnamon cocoa powder.</p>
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Artisan Cappuccino" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COFFEE: Caramel Latte -->
+          <article class="product-card menu-filterable-item" data-category="coffee" data-price="160">
+            <div class="product-image-box">
+              <span class="product-tag">Signature</span>
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=700&q=80" alt="Caramel Latte">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee · Hot</span>
+                <span>Sweet Caramel</span>
+              </div>
+              <h3 class="product-title">Caramel Latte</h3>
+              <p class="product-description">Velvety steamed whole milk combined with freshly pulled espresso and artisan slow-simmered caramel sauce.</p>
+              <div class="product-footer">
+                <div class="product-price">₹160 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Caramel Latte" data-price="160">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COFFEE: Cafe Mocha -->
+          <article class="product-card menu-filterable-item" data-category="coffee" data-price="170">
+            <div class="product-image-box">
+              <span class="product-tag">Indulgent</span>
+              <img src="https://images.unsplash.com/photo-1607681034540-2c46cc71896d?auto=format&fit=crop&w=700&q=80" alt="Cafe Mocha">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee · Hot</span>
+                <span>Belgian Chocolate</span>
+              </div>
+              <h3 class="product-title">Café Mocha</h3>
+              <p class="product-description">Dark Belgian cocoa melted into a double shot of espresso, textured warm milk, and topped with fresh whipped cream.</p>
+              <div class="product-footer">
+                <div class="product-price">₹170 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Café Mocha" data-price="170">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COFFEE: Americano -->
+          <article class="product-card menu-filterable-item" data-category="coffee" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag">Pure Black</span>
+              <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=700&q=80" alt="Hot Americano">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Coffee · Hot</span>
+                <span>Crisp & Clean</span>
+              </div>
+              <h3 class="product-title">Caffè Americano</h3>
+              <p class="product-description">A full-bodied double espresso poured gently over hot water, highlighting delicate floral and citrus notes.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Mug</small></div>
+                <button class="btn-add-order" data-name="Caffè Americano" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- TEA: Masala Chai Latte -->
+          <article class="product-card menu-filterable-item" data-category="tea" data-price="110">
+            <div class="product-image-box">
+              <span class="product-tag">Spiced</span>
+              <img src="https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=700&q=80" alt="Spiced Masala Chai Latte">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Artisan Tea</span>
+                <span>Warm Spices</span>
+              </div>
+              <h3 class="product-title">Royal Masala Chai</h3>
+              <p class="product-description">Whole leaf Assam CTC tea slow-brewed with fresh cardamom pods, crushed ginger, cloves, and whole milk.</p>
+              <div class="product-footer">
+                <div class="product-price">₹110 <small>Kullhad Cup</small></div>
+                <button class="btn-add-order" data-name="Royal Masala Chai" data-price="110">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- TEA: Chamomile Citrus Herbal -->
+          <article class="product-card menu-filterable-item" data-category="tea" data-price="130">
+            <div class="product-image-box">
+              <span class="product-tag">Caffeine-Free</span>
+              <img src="https://images.unsplash.com/photo-1597481499750-3e6b22637e12?auto=format&fit=crop&w=700&q=80" alt="Chamomile Herbal Tea">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Artisan Tea</span>
+                <span>Soothing Floral</span>
+              </div>
+              <h3 class="product-title">Chamomile Blossom Tea</h3>
+              <p class="product-description">Whole Egyptian chamomile flowers infused with dried orange peel and lemongrass. Calming and delicately sweet.</p>
+              <div class="product-footer">
+                <div class="product-price">₹130 <small>Teapot for 1</small></div>
+                <button class="btn-add-order" data-name="Chamomile Blossom Tea" data-price="130">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- TEA: Matcha Green Latte -->
+          <article class="product-card menu-filterable-item" data-category="tea" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag">Superfood</span>
+              <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?auto=format&fit=crop&w=700&q=80" alt="Matcha Green Tea Latte">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Artisan Tea</span>
+                <span>Antioxidant Rich</span>
+              </div>
+              <h3 class="product-title">Japanese Matcha Latte</h3>
+              <p class="product-description">Ceremonial grade Uji green tea whisked with creamy steamed oat milk and a touch of wild honey.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>Regular</small></div>
+                <button class="btn-add-order" data-name="Japanese Matcha Latte" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: Club Sandwich -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Chef's Special</span>
+              <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=80" alt="Gourmet Club Sandwich">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Food & Snacks</span>
+                <span>Toasted Fresh</span>
+              </div>
+              <h3 class="product-title">Signature Club Sandwich</h3>
+              <p class="product-description">Toasted sourdough bread stacked with smoked chicken/paneer, crisp iceberg lettuce, gouda cheese, and herb aioli.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>With Fries</small></div>
+                <button class="btn-add-order" data-name="Signature Club Sandwich" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: Truffle Veggie Burger -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="190">
+            <div class="product-image-box">
+              <span class="product-tag">Gourmet</span>
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80" alt="Gourmet Burger">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Food & Snacks</span>
+                <span>Juicy & Crispy</span>
+              </div>
+              <h3 class="product-title">Truffle Brioche Burger</h3>
+              <p class="product-description">Crispy herb patty on a toasted butter brioche bun with caramelized onions, pickled gherkins, and truffle mayo.</p>
+              <div class="product-footer">
+                <div class="product-price">₹190 <small>With Wedges</small></div>
+                <button class="btn-add-order" data-name="Truffle Brioche Burger" data-price="190">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: Creamy Alfredo Pasta -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="210">
+            <div class="product-image-box">
+              <span class="product-tag">Italian</span>
+              <img src="https://images.unsplash.com/photo-1621996346565-e3d5d6281699?auto=format&fit=crop&w=700&q=80" alt="Creamy Alfredo Pasta">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Food & Snacks</span>
+                <span>Parmesan Cream</span>
+              </div>
+              <h3 class="product-title">Creamy Alfredo Penne</h3>
+              <p class="product-description">Al dente penne tossed in slow-cooked garlic parmesan white sauce with sautéed mushrooms, bell peppers, and fresh basil.</p>
+              <div class="product-footer">
+                <div class="product-price">₹210 <small>With Garlic Bread</small></div>
+                <button class="btn-add-order" data-name="Creamy Alfredo Penne" data-price="210">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: French Butter Croissant -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag">Bakery Fresh</span>
+              <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Flaky Butter Croissant">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Bakery</span>
+                <span>Flaky & Buttery</span>
+              </div>
+              <h3 class="product-title">Butter Croissant</h3>
+              <p class="product-description">Handmade layered French puff pastry with pure European butter, baked golden brown and crisp every morning.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Warm</small></div>
+                <button class="btn-add-order" data-name="Butter Croissant" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: Cheesy Garlic Bread -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag">Warm Snack</span>
+              <img src="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=700&q=80" alt="Cheesy Garlic Bread">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Food & Snacks</span>
+                <span>Melted Mozzarella</span>
+              </div>
+              <h3 class="product-title">Cheesy Garlic Baguette</h3>
+              <p class="product-description">Artisan French baguette smothered with roasted garlic herb butter, bubbling mozzarella, and chili flakes.</p>
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>4 Pieces</small></div>
+                <button class="btn-add-order" data-name="Cheesy Garlic Baguette" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- FOOD: Peri-Peri French Fries -->
+          <article class="product-card menu-filterable-item" data-category="food" data-price="130">
+            <div class="product-image-box">
+              <span class="product-tag">Crispy</span>
+              <img src="https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=700&q=80" alt="Crispy French Fries">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Food & Snacks</span>
+                <span>Spicy Seasoning</span>
+              </div>
+              <h3 class="product-title">Peri-Peri Crisp Fries</h3>
+              <p class="product-description">Golden skin-on potato fries tossed in our signature African bird's eye chili seasoning with garlic dipping dip.</p>
+              <div class="product-footer">
+                <div class="product-price">₹130 <small>Basket</small></div>
+                <button class="btn-add-order" data-name="Peri-Peri Crisp Fries" data-price="130">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- DESSERTS: Chocolate Brownie -->
+          <article class="product-card menu-filterable-item" data-category="desserts" data-price="120">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Top Pick</span>
+              <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=700&q=80" alt="Fudge Chocolate Brownie">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Desserts</span>
+                <span>Rich Fudge</span>
+              </div>
+              <h3 class="product-title">Chocolate Brownie</h3>
+              <p class="product-description">Rich Belgian dark chocolate brownie warmed to melting perfection and topped with roasted walnuts.</p>
+              <div class="product-footer">
+                <div class="product-price">₹120 <small>Slice</small></div>
+                <button class="btn-add-order" data-name="Chocolate Brownie" data-price="120">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- DESSERTS: Blueberry Cheesecake -->
+          <article class="product-card menu-filterable-item" data-category="desserts" data-price="190">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">Bestseller</span>
+              <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=80" alt="Blueberry Cheesecake">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Desserts</span>
+                <span>Philadelphia Cream</span>
+              </div>
+              <h3 class="product-title">Blueberry Cheesecake</h3>
+              <p class="product-description">Velvety baked cream cheesecake rested on a buttery biscuit base, finished with tart blueberry glaze.</p>
+              <div class="product-footer">
+                <div class="product-price">₹190 <small>Slice</small></div>
+                <button class="btn-add-order" data-name="Blueberry Cheesecake" data-price="190">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- DESSERTS: Classic Tiramisu -->
+          <article class="product-card menu-filterable-item" data-category="desserts" data-price="180">
+            <div class="product-image-box">
+              <span class="product-tag">Italian Classic</span>
+              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=700&q=80" alt="Italian Tiramisu">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Desserts</span>
+                <span>Espresso Soaked</span>
+              </div>
+              <h3 class="product-title">Artisan Tiramisu</h3>
+              <p class="product-description">Savoiardi ladyfingers soaked in our signature house espresso layered with mascarpone cream and cocoa dusting.</p>
+              <div class="product-footer">
+                <div class="product-price">₹180 <small>Glass Jar</small></div>
+                <button class="btn-add-order" data-name="Artisan Tiramisu" data-price="180">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- DESSERTS: Belgian Waffle -->
+          <article class="product-card menu-filterable-item" data-category="desserts" data-price="160">
+            <div class="product-image-box">
+              <span class="product-tag">Warm Waffle</span>
+              <img src="https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=700&q=80" alt="Belgian Waffles with Berries">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Desserts</span>
+                <span>Crispy & Sweet</span>
+              </div>
+              <h3 class="product-title">Belgian Berry Waffle</h3>
+              <p class="product-description">Golden malted waffle iron-baked with deep pockets filled with maple syrup, fresh berries, and whipped cream.</p>
+              <div class="product-footer">
+                <div class="product-price">₹160 <small>Platter</small></div>
+                <button class="btn-add-order" data-name="Belgian Berry Waffle" data-price="160">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COLD DRINKS: Cold Coffee -->
+          <article class="product-card menu-filterable-item" data-category="cold drinks" data-price="150">
+            <div class="product-image-box">
+              <span class="product-tag tag-special">All Time Hit</span>
+              <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=700&q=80" alt="Classic Cold Coffee">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Cold Drinks</span>
+                <span>Thick & Creamy</span>
+              </div>
+              <h3 class="product-title">Classic Thick Cold Coffee</h3>
+              <p class="product-description">A rich blended frappe made with double espresso, creamy chilled milk, and a scoop of Madagascar vanilla ice cream.</p>
+              <div class="product-footer">
+                <div class="product-price">₹150 <small>Tall Glass</small></div>
+                <button class="btn-add-order" data-name="Classic Thick Cold Coffee" data-price="150">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COLD DRINKS: Nitro Cold Brew -->
+          <article class="product-card menu-filterable-item" data-category="cold drinks" data-price="170">
+            <div class="product-image-box">
+              <span class="product-tag">18-Hour Brew</span>
+              <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=80" alt="Nitro Cold Brew">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Cold Drinks</span>
+                <span>Silky Cascade</span>
+              </div>
+              <h3 class="product-title">Nitro Cold Brew</h3>
+              <p class="product-description">Steeped cold for 18 hours and infused with nitrogen for a creamy, stout-like texture without any added milk or sugar.</p>
+              <div class="product-footer">
+                <div class="product-price">₹170 <small>Chilled Can/Glass</small></div>
+                <button class="btn-add-order" data-name="Nitro Cold Brew" data-price="170">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- COLD DRINKS: Berry Lemonade Iced Fizz -->
+          <article class="product-card menu-filterable-item" data-category="cold drinks" data-price="140">
+            <div class="product-image-box">
+              <span class="product-tag">Non-Coffee</span>
+              <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=80" alt="Sparkling Berry Lemonade">
+            </div>
+            <div class="product-content">
+              <div class="product-meta-row">
+                <span>Cold Drinks</span>
+                <span>Tangy & Sparkling</span>
+              </div>
+              <h3 class="product-title">Sparkling Berry Lemonade</h3>
+              <p class="product-description">Fresh squeezed lemon juice, muddled wild berries, sparkling water, and garden mint sprigs served over cracked ice.</p>
+              <div class="product-footer">
+                <div class="product-price">₹140 <small>Chilled Goblet</small></div>
+                <button class="btn-add-order" data-name="Sparkling Berry Lemonade" data-price="140">Add to Order</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Order Drawer Indicator -->
+  <aside class="floating-order-bar" id="floatingOrderBar">
+    <span>🛍</span>
+    <span class="floating-order-text" style="font-weight: 600; font-size: 0.92rem;">0 items in order</span>
+    <button class="btn btn-primary btn-sm cart-open-trigger" style="padding: 0.4rem 0.9rem; font-size: 0.8rem;">View Order</button>
+  </aside>
+
+  <!-- Cart Modal -->
+  <div class="cart-modal" id="cartModalOverlay">
+    <div class="cart-drawer-panel">
+      <div class="cart-drawer-header">
+        <h3 style="font-size: 1.25rem; color: #ffffff;">Your Order Tray</h3>
+        <button id="cartCloseBtn" style="color: #ffffff; font-size: 1.5rem; line-height: 1;">&times;</button>
+      </div>
+      <div class="cart-items-list" id="cartItemsList"></div>
+      <div class="cart-drawer-footer">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 0.8rem; font-size: 0.9rem; color: var(--color-text-muted);">
+          <span>Taxes & GST (5%)</span>
+          <span id="cartTax">₹0</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700; color: var(--color-espresso-900); border-top: 1px dashed var(--color-border); padding-top: 0.6rem;">
+          <span>Total</span>
+          <span id="cartTotal">₹0</span>
+        </div>
+        <button id="cartCheckoutBtn" class="btn btn-primary" style="width: 100%;">Proceed to Demonstration Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">↑</button>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☕ BREW & BEAN</h3>
+          <p style="font-style: italic; color: var(--color-caramel-300); margin-bottom: 0.8rem;">“Where Every Cup Tells a Story”</p>
+          <p>A warm, independent specialty café dedicated to high-altitude single origin coffees, handmade pastries, and genuine hospitality.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html">Full Menu</a></li>
+            <li><a href="coffee.html">Coffee Specialties</a></li>
+            <li><a href="food.html">Food & Snacks</a></li>
+            <li><a href="desserts.html">Artisan Desserts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Discover More</h4>
+          <ul class="footer-links">
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="offers.html">Special Offers</a></li>
+            <li><a href="events.html">Events & Workshops</a></li>
+            <li><a href="reservation.html">Table Reservation</a></li>
+            <li><a href="reviews.html">Customer Reviews</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Opening Hours</h4>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Mon – Fri:</strong> 8:00 AM – 10:00 PM
+          </p>
+          <p style="font-size: 0.9rem; margin-bottom: 1.25rem; color: #d6cac0;">
+            <strong style="color: #ffffff;">Sat – Sun:</strong> 9:00 AM – 11:00 PM
+          </p>
+          <h4 class="footer-heading" style="margin-top: 1.5rem;">Café Location</h4>
+          <p style="font-size: 0.88rem; color: #b5a498;">12 Coffee Lane, Bengaluru, Karnataka</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Brew & Bean Café. All Rights Reserved.</div>
+        <div class="footer-academic-tag">Designed as a BCA Academic Project · Static Front-End Architecture</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js" defer></script>
+</body>
+</html>
